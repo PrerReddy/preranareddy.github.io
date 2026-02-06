@@ -106,8 +106,8 @@ h1:hover, h2:hover {
 
 /* ---------- TEXT BOX ---------- */
 .text-box p {
-  font-size: 10px;
-  max-width: 400px;
+  font-size: 9px;
+  max-width: 500px;
   text-align: justify; 
 }
 
