@@ -12,21 +12,22 @@ body {
   background: #f5f6f4;
   color: #1e1e1e;
   line-height: 1.6;
-}
+  text-align: center; 
 
 /* ---------- NAV ---------- */
 nav {
   width: 100%;
   padding: 20px 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 40px;
 }
 
 nav a {
   text-decoration: none;
   color: #1e1e1e;
-  margin-left: 30px;
+  margin: 0 15px;
   font-size: 14px;
 }
 
@@ -34,68 +35,63 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ---------- SECTION LAYOUT ---------- */
-.section {
-  width: 100%;
-  padding: 60px;
+/* ---------- SECTIONS ---------- */
+.section,
+.split,
+.list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
 }
 
-.section-grid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 40px;
-  align-items: center;
-}
-
-/* ---------- IMAGES (UNIFORM SIZE) ---------- */
-img {
-  width: 100%;
-  height: 500px;       /* Uniform height for all images */
-  object-fit: cover;   /* Crop without stretching */
-  display: block;
-}
-
-/* ---------- SPLIT LAYOUT ---------- */
+/* ---------- SPLIT LAYOUT (IMAGE + TEXT) ---------- */
 .split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 80vh;
+  flex-direction: column; /* stack image and text vertically */
 }
 
 .split-image {
   width: 100%;
-  height: 100%;
+  max-width: 500px;
 }
 
 .split-text {
-  padding: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 700px;
+}
+
+/* ---------- IMAGES ---------- */
+img {
+  width: 100%;
+  max-width: 500px;  
+  height: auto;      
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
 }
 
 /* ---------- FANCY HEADINGS ---------- */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;        
-  letter-spacing: 1px;    
-  color: #1e1e1e;         
-  line-height: 1.2;        
+  letter-spacing: 1px;
+  color: #1e1e1e;
+  line-height: 1.2;
+  margin-bottom: 15px;
 }
 
+/* Specific heading sizes */
 h1 {
   font-size: 48px;
-  margin-bottom: 20px;
 }
 
 h2 {
   font-size: 32px;
-  margin-bottom: 15px;
 }
 
 h3 {
   font-size: 24px;
-  margin-bottom: 10px;
 }
 
 /* Optional hover effect for headings */
@@ -104,11 +100,37 @@ h1:hover, h2:hover {
   transition: 0.3s;
 }
 
-/* ---------- TEXT BOX ---------- */
-.text-box p {
-  font-size: 7px;
-  max-width: 400px;
+/* ---------- PARAGRAPHS ---------- */
+p {
+  font-size: 16px;
+  line-height: 1.7;
   text-align: justify;   
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ---------- LIST ITEMS ---------- */
+.list-item {
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-item img {
+  max-width: 500px;
+  height: auto;
+}
+
+.list-item h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* ---------- BUTTON LINKS ---------- */
+a.button-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #1e1e1e;
 }
 
 /* ---------- VERTICAL TITLE ---------- */
@@ -122,44 +144,16 @@ h1:hover, h2:hover {
   color: #444;
 }
 
-/* ---------- RESEARCH / BLOG ITEMS ---------- */
-.list-item {
-  display: grid;
-  grid-template-columns: 45% 55%;
-  gap: 40px;
-  margin-bottom: 80px;
-}
-
-/* Images inside list-items use global img styles */
-.list-item h2 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 15px;
-}
-
-/* ---------- LINKS ---------- */
-a.button-link {
-  display: inline-block;
-  margin-top: 20px;
-  font-size: 14px;
-  text-decoration: underline;
-  color: #1e1e1e;
-}
-
-/* ---------- MOBILE FRIENDLY ---------- */
+/* ---------- MOBILE RESPONSIVE ---------- */
 @media (max-width: 900px) {
-  .split {
-    grid-template-columns: 1fr;
+  .split-image,
+  .list-item img {
+    max-width: 100%;
   }
 
-  .split-image {
-    height: 50vh; /* Smaller split image height on mobile */
-  }
-
-  img {
-    height: 300px; /* All images shrink on mobile */
-  }
-
-  .split-text {
-    padding: 40px;
+  .split-text,
+  p {
+    max-width: 90%;
+    padding: 20px;
   }
 }
