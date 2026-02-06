@@ -47,30 +47,7 @@ nav a:hover {
   padding: 60px 20px;
 }
 
-/* ---------- SPLIT LAYOUT (IMAGE + TEXT) ---------- */
-.split {
-  flex-direction: column; 
-}
-
-.split-image {
-  width: 100%;
-  max-width: 500px;
-}
-
-.split-text {
-  max-width: 700px;
-}
-
-/* ---------- IMAGES ---------- */
-img {
-  width: 100%;
-  max-width: 500px;  
-  height: auto;      
-  object-fit: cover;
-  display: block;
-  border-radius: 5px;
-}
-
+  
 /* ---------- HEADINGS ---------- */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
@@ -110,20 +87,6 @@ p {
   margin: auto;
 }
 
-/* ---------- LIST ITEMS ---------- */
-.list-item {
-  flex-direction: column;
-  align-items: center;
-}
-
-.list-item img {
-  max-width: 500px;
-  height: auto;
-}
-
-.list-item h2 {
-  font-family: 'Playfair Display', serif;
-}
 
 /* ---------- BUTTON LINKS ---------- */
 a.button-link {
@@ -145,16 +108,19 @@ a.button-link {
   color: #444;
 }
 
+
 /* ---------- MOBILE RESPONSIVE ---------- */
 @media (max-width: 900px) {
-  .split-image,
-  .list-item img {
+  .split {
+    flex-direction: column;    /* stack vertically on mobile */
+    gap: 20px;
+  }
+
+  .split-image, .split-text {
     max-width: 100%;
   }
 
-  .split-text,
-  p {
-    max-width: 90%;
-    padding: 20px;
+  img {
+    height: auto;             /* let image scale naturally */
   }
 }
