@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap');
 
+/* ---------- GLOBAL ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -46,24 +47,24 @@ nav a:hover {
   align-items: center;
 }
 
-/* ---------- IMAGES ---------- */
-.image-large {
+/* ---------- IMAGES (UNIFORM SIZE) ---------- */
+img {
   width: 100%;
-  height: 500px;
-  background-size: cover;
-  background-position: center;
+  height: 500px;       /* Uniform height for all images */
+  object-fit: cover;   /* Crop without stretching */
+  display: block;
 }
 
+/* ---------- SPLIT LAYOUT ---------- */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 80vh;
 }
 
-.split-image img {
+.split-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .split-text {
@@ -73,15 +74,37 @@ nav a:hover {
   justify-content: center;
 }
 
-
-
-/* ---------- TEXT ---------- */
-.text-box h1 {
+/* ---------- FANCY HEADINGS ---------- */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
-  font-size: 42px;
+  font-weight: 600;        /* Bold and elegant */
+  letter-spacing: 1px;     /* Slight space for elegance */
+  color: #1e1e1e;          /* Dark text */
+  line-height: 1.2;        /* Tight line-height */
+}
+
+h1 {
+  font-size: 48px;
   margin-bottom: 20px;
 }
 
+h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Optional hover effect for headings */
+h1:hover, h2:hover {
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+/* ---------- TEXT BOX ---------- */
 .text-box p {
   font-size: 15px;
   max-width: 400px;
@@ -106,12 +129,7 @@ nav a:hover {
   margin-bottom: 80px;
 }
 
-.list-item img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-}
-
+/* Images inside list-items use global img styles */
 .list-item h2 {
   font-family: 'Playfair Display', serif;
   margin-bottom: 15px;
@@ -133,11 +151,14 @@ a.button-link {
   }
 
   .split-image {
-    height: 50vh;
+    height: 50vh; /* Smaller split image height on mobile */
+  }
+
+  img {
+    height: 300px; /* All images shrink on mobile */
   }
 
   .split-text {
     padding: 40px;
   }
 }
-
