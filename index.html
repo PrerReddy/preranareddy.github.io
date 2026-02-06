@@ -9,56 +9,45 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                    Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
       background-color: #ffffff;
       color: #111;
-      line-height: 1.6;
     }
 
     .container {
-      max-width: 720px;
-      margin: 80px auto;
+      max-width: 900px;
+      margin: 60px auto;
       padding: 0 20px;
     }
 
-    h1 {
-      font-size: 2.6em;
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 60px;
+    }
+
+    .name {
+      font-size: 3em;
       font-weight: 600;
-      margin-bottom: 10px;
     }
 
-    h2 {
-      font-size: 1.4em;
-      font-weight: 500;
-      margin-top: 50px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.05em;
-      margin-bottom: 16px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    a {
-      color: #1a4cff;
+    .nav a {
+      margin-left: 18px;
       text-decoration: none;
+      color: #1a4cff;
+      font-size: 1em;
     }
 
-    a:hover {
+    .nav a:hover {
       text-decoration: underline;
     }
 
-    .subtitle {
+    p {
       font-size: 1.1em;
-      color: #444;
-      margin-bottom: 30px;
+      line-height: 1.6;
+      max-width: 700px;
     }
   </style>
 </head>
@@ -66,52 +55,20 @@
 <body>
   <div class="container">
 
-    <h1>Prerana Reddy</h1>
-    <div class="subtitle">
-      Research Assistant · Cognitive Neuroscience
+    <div class="header">
+      <div class="name">Prerana Reddy</div>
+      <div class="nav">
+        <a href="about.html">About</a>
+        <a href="cv.html">CV</a>
+        <a href="research.html">Research</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
     </div>
 
     <p>
-      I am a Research Assistant with a Master’s degree in Cognitive Neuroscience
-      and approximately 2.5 years of research experience in social and affective
-      cognition. I am currently associated with the Social and Affective Cognition
-      Lab at IIT Kanpur.
-    </p>
-
-    <p>
-      My academic interests lie in perception, predictive processing, neural
-      oscillations, and their relevance to clinical populations. I am preparing
-      to apply for PhD programs in the 2027–2028 cycle.
-    </p>
-
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Predictive processing and perception</li>
-      <li>Neural oscillations and EEG</li>
-      <li>Social and affective cognition</li>
-      <li>Clinical and computational neuroscience</li>
-    </ul>
-
-    <h2>Experience</h2>
-    <p>
-      <strong>Research Assistant</strong><br>
-      Social and Affective Cognition Lab, IIT Kanpur
-    </p>
-    <ul>
-      <li>Designed and implemented behavioral and EEG experiments</li>
-      <li>Worked with EEG preprocessing and analysis pipelines</li>
-      <li>Contributed to ongoing projects in social cognition</li>
-    </ul>
-
-    <h2>Curriculum Vitae</h2>
-    <p>
-      <a href="Prerana_Reddy_CV.pdf" target="_blank">Download CV (PDF)</a>
-    </p>
-
-    <h2>Contact</h2>
-    <p>
-      Email: your@email.com<br>
-      GitHub: <a href="https://github.com/preranareddy">github.com/preranareddy</a>
+      Research Assistant in Cognitive Neuroscience with interests in perception,
+      predictive processing, and neural oscillations. Preparing for PhD applications.
     </p>
 
   </div>
