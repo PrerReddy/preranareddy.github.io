@@ -50,7 +50,7 @@ nav a:hover {
 /* ---------- IMAGES (UNIFORM SIZE) ---------- */
 img {
   width: 100%;
-  height: 500px;       /* Uniform height for all images */
+  height: 800px;       /* Uniform height for all images */
   object-fit: cover;   /* Crop without stretching */
   display: block;
 }
@@ -77,10 +77,10 @@ img {
 /* ---------- FANCY HEADINGS ---------- */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
-  font-weight: 600;        /* Bold and elegant */
-  letter-spacing: 1px;     /* Slight space for elegance */
-  color: #1e1e1e;          /* Dark text */
-  line-height: 1.2;        /* Tight line-height */
+  font-weight: 600;        
+  letter-spacing: 1px;    
+  color: #1e1e1e;         
+  line-height: 1.2;        
 }
 
 h1 {
@@ -108,6 +108,7 @@ h1:hover, h2:hover {
 .text-box p {
   font-size: 15px;
   max-width: 400px;
+  text-align: justify;   
 }
 
 /* ---------- VERTICAL TITLE ---------- */
