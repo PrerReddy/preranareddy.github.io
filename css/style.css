@@ -163,3 +163,75 @@ a.button-link {
     padding: 40px;
   }
 }
+/* ---------- GALLERY LAYOUT FOR BLOG & GALLERY ---------- */
+.gallery {
+  column-count: 3;
+  column-gap: 2.5rem;
+  padding: 4rem;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.gallery-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 0.8rem;
+  gap: 1rem;
+}
+
+.gallery-meta h4 {
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+  max-width: 65%;
+}
+
+.gallery-meta a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.gallery-meta a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.gallery-item:nth-child(odd) {
+  transform: translateY(10px);
+}
+
+.gallery-item:nth-child(3n) {
+  transform: translateY(-15px);
+}
+
+/* ---------- MOBILE FRIENDLY---------- */
+@media (max-width: 900px) {
+  .gallery {
+    column-count: 2;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    column-count: 1;
+  }
+
+  .gallery-meta {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
+
